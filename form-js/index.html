@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+</head>
+<body>
+
+    <div class="formContainer">
+        <div class="titleContainer">
+            <h1 class="formTitle">Kayıt Formu</h1>
+        </div>
+        <form id="formSection" novalidate>
+            <div class="formInfo">
+                <label>Ad</label>
+                <input type="text" name="text" placeholder="Adınızı giriniz." required minlength="3" maxlength="20">
+            </div>
+            <div class="formInfo"> 
+                <label>Soyad</label>
+                <input type="text" name="surname" placeholder="Soyad giriniz." required minlength="3" maxlength="20">
+            </div>
+            <div class="formInfo">
+                <label>E-mail Adresi</label>
+                <input type="email" name="email" placeholder="E-mail:x@gmail.com" required>
+            </div>
+            <div class="formInfo">
+                <label>GSM</label>
+                <input type="tel" name="phone" id="phone"  placeholder="GSM:(555-555-5555)" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            </div>
+            <div class="formInfo">
+                <label>Şifre</label>
+                <input type="password" name="text" id="password" placeholder="Şifre giriniz." required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+            </div>
+            <div class="formInfo">
+                <label>Şifre Tekrarı</label>
+                <input type="password" name="text" id="repassword" placeholder="Şifrenizi tekrar giriniz." required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+            </div>
+            <textarea name="textarea" id=""  rows="5" placeholder="Adres giriniz." required></textarea>
+            <button type="submit">Kayıt Ol</button>
+
+
+        </form>
+
+        <div class="formAlert">
+            <p class="formAlertText"></p>
+        </div>
+    </div>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
